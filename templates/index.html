@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-3">Authors List</h2>
+
+<a href="/add" class="btn btn-primary mb-3">Add New Author</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Specialisation</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for a in authors %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.specialisation }}</td>
+            <td>
+                <a class="btn btn-warning btn-sm" href="/edit/{{ a.id }}">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/delete/{{ a.id }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

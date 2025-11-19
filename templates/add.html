@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add Author</h2>
+
+<form method="POST">
+  <div class="mb-3">
+    <label class="form-label">Author Name</label>
+    <input name="name" type="text" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Specialisation</label>
+    <input name="specialisation" type="text" class="form-control" required>
+  </div>
+
+  <button class="btn btn-success">Add Author</button>
+  <a class="btn btn-secondary" href="/">Cancel</a>
+</form>
+{% endblock %}

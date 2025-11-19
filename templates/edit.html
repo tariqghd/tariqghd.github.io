@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit Author</h2>
+
+<form method="POST">
+  <div class="mb-3">
+    <label class="form-label">Author Name</label>
+    <input name="name" type="text" class="form-control" value="{{ author.name }}" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Specialisation</label>
+    <input name="specialisation" type="text" class="form-control" value="{{ author.specialisation }}" required>
+  </div>
+
+  <button class="btn btn-primary">Save Changes</button>
+  <a class="btn btn-secondary" href="/">Cancel</a>
+</form>
+{% endblock %}
